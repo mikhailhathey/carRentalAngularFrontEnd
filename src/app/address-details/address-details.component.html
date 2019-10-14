@@ -1,0 +1,20 @@
+<h2>Address Details</h2>
+
+<hr/>
+<div *ngIf="address">
+  <div>
+    <label><b>First Name: </b></label> {{address.firstName}}
+  </div>
+  <div>
+    <label><b>Last Name: </b></label> {{address.lastName}}
+  </div>
+  <div>
+    <label><b>Email Id: </b></label> {{address.emailId}}
+  </div>
+</div>
+
+<br>
+<br>
+<button (click)="list()" class="btn btn-primary">Back to Address List</button><br>
+
+

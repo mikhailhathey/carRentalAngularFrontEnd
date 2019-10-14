@@ -1,0 +1,36 @@
+<h3>Create Address</h3>
+<div [hidden]="submitted" style="width: 400px;">
+  <form (ngSubmit)="onSubmit()">
+    <div class="form-group">
+      <label for="name">House Number</label>
+      <input type="text" class="form-control" id="houseNumber" required [(ngModel)]="address.houseNumber" name="houseNumber">
+    </div>
+
+    <div class="form-group">
+      <label for="name">Street Name</label>
+      <input type="text" class="form-control" id="streetName" required [(ngModel)]="address.streetName" name="streetName">
+    </div>
+
+    <div class="form-group">
+      <label for="name">Suburb</label>
+      <input type="text" class="form-control" id="suburb" required [(ngModel)]="address.suburb" name="suburb">
+    </div>
+
+    <div class="form-group">
+      <label for="name">Postal Code</label>
+      <input type="text" class="form-control" id="postalCode" required [(ngModel)]="address.postalCode" name="postalCode">
+    </div>
+
+    <div class="form-group">
+      <label for="name">City</label>
+      <input type="text" class="form-control" id="city" required [(ngModel)]="address.city" name="city">
+    </div>
+
+    <button type="submit" class="btn btn-success">Submit</button>
+  </form>
+</div>
+
+<div [hidden]="!submitted">
+  <h4>You submitted successfully!</h4>
+  <!-- <button class="btn btn-success" (click)="newAddress()">Add</button> -->
+</div>
